@@ -1,5 +1,5 @@
 name: sib_t_product_design_fb
-description: A new Flutter project.
+description: An application for viewing drawings of products manufactured by STAL'EMAL (in the city of Novokuzentsk).
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
