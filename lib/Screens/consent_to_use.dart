@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sib_t_product_design/Utils/decoration.dart';
+import 'package:sib_t_product_design_fb/Utils/decoration.dart';
 
 class ConsentToUse extends StatefulWidget {
   const ConsentToUse({Key? key}) : super(key: key);
