@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "344026981547",
+    "project_id": "sib-t-product-design-fb",
+    "storage_bucket": "sib-t-product-design-fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344026981547:android:7b2e8188f2598eb2dfc3ee",
+        "android_client_info": {
+          "package_name": "com.sib_t_product_design_fb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344026981547-2ihdl367bn88f9tk1q4nthgg84vd7o13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpyBA2RHYzvSVzlW93RxCjQSR6xKmVP7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344026981547-2ihdl367bn88f9tk1q4nthgg84vd7o13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

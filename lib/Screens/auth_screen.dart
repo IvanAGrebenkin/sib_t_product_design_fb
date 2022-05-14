@@ -11,8 +11,8 @@ class AuthScreen extends StatefulWidget {
 class _AuthScreenState extends State<AuthScreen> {
  // const AuthScreen({Key? key}) : super(key: key);
 
-  final _loginTextController = TextEditingController();
-  final _passwordTextController = TextEditingController();
+  final _loginTextController = TextEditingController(text: 'admin'); // Внутри скобок предварительно заполненное значение для быстой авторизации
+  final _passwordTextController = TextEditingController(text: 'admin'); // Внутри скобок предварительно заполненное значение для быстой авторизации
   String? errorText;
 
   void _auth (){
@@ -60,7 +60,8 @@ class _AuthScreenState extends State<AuthScreen> {
                         focusedBorder: textFormFieldDecoration,
                         filled: true,
                         fillColor: Color(0xffECEFF1),
-                        labelText: 'Логин',),
+                        labelText: 'Логин',
+                      ),
                     ),
                   ),// Поле ввода Логина
                   const SizedBox(height: 40),// Отступ по вертикали

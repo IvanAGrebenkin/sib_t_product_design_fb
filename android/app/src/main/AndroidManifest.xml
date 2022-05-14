@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sib_t_product_design">
    <application
-        android:label="Сибирские товары: конструкция изделий (Firebase)"
+        android:label="Сибирские товары: конструкция изделий (FB)"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

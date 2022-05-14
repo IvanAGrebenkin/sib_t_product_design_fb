@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../../Utils/decoration.dart';
 import '../../Utils/widgets.dart';
 import 'household_items_drawing_view_screen.dart';
+// import 'package:firebase_storage/firebase_storage.dart';
+
 
 // Класс для объявления передаваемых аргумнтов
 class PassedFromHouseholdItemsSelectionScreenArguments {
@@ -52,7 +54,7 @@ class _HouseholdItemsDrawingSelectionScreenState extends State<HouseholdItemsDra
       HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 35.01.02.А', householdItemsDrawingName: 'Ручка бака',currentHouseholdItemsDrawing: 'assets/drawings/fittings/ПЭ 35.01.02.А Ручка баков.webp',),
       HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 35.02.СБ', householdItemsDrawingName: 'Крышка с ручкой в сборе',currentHouseholdItemsDrawing: 'assets/drawings/lids/02827/ПЭ 35.02.СБ Крышка.webp',),
       HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 35.02.01.А', householdItemsDrawingName: 'Крышка',currentHouseholdItemsDrawing: 'assets/drawings/lids/02827/ПЭ 35.02.01.А Крышка.webp',),
-      HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 07.02', householdItemsDrawingName: 'Ручка крышки',currentHouseholdItemsDrawing: 'assets/drawings/fittings/ПЭ 07.02 Ручка.webp',),
+      HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 07.02', householdItemsDrawingName: 'Ручка крышки',currentHouseholdItemsDrawing: 'ПЭ 07.02 Ручка.webp',),
     ];
 
     final householdItemsDrawings2829 =[
@@ -144,7 +146,9 @@ class _HouseholdItemsDrawingSelectionScreenState extends State<HouseholdItemsDra
     final householdItemsDrawings0102 =[
       HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 08.СБ', householdItemsDrawingName: 'Корпус в сборе',currentHouseholdItemsDrawing: 'assets/drawings/household_items/0102/ПЭ 08.СБ Кружка вм. 0,25 л.webp',),
       HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 08.01', householdItemsDrawingName: 'Корпус',currentHouseholdItemsDrawing: 'assets/drawings/household_items/0102/ПЭ 08.01 Корпус.webp',),
-      HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 07.02', householdItemsDrawingName: 'Ручка',currentHouseholdItemsDrawing: 'assets/drawings/fittings/ПЭ 07.02 Ручка.webp',),
+      // HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 07.02', householdItemsDrawingName: 'Ручка',currentHouseholdItemsDrawing: 'assets/drawings/fittings/ПЭ 07.02 Ручка.webp',),
+      HouseholdItemsDrawings (householdItemsDrawingNumber: 'ПЭ 07.02', householdItemsDrawingName: 'Ручка',currentHouseholdItemsDrawing: 'ПЭ 07.02 Ручка.webp',),
+
     ];
 
     final householdItemsDrawings0103 =[
@@ -216,6 +220,8 @@ class _HouseholdItemsDrawingSelectionScreenState extends State<HouseholdItemsDra
     else if (currentArt == '0612'){householdItemsDrawings=householdItemsDrawings0612;}
     else if (currentArt == '0908'){householdItemsDrawings=householdItemsDrawings0908;}
 
+
+
     return Scaffold(
       appBar: panDrawingSelectionScreenAppBar(context, pageName),
       drawer: navDrawer(context),
@@ -244,6 +250,9 @@ class _HouseholdItemsDrawingSelectionScreenState extends State<HouseholdItemsDra
                     itemBuilder: (BuildContext context, int index){
                       final householdItemsDrawing = householdItemsDrawings[index];
                       final largeCurrentDrawing = householdItemsDrawing.currentHouseholdItemsDrawing;
+
+                      // final ref = FirebaseStorage.instance.ref().child(householdItemsDrawing.currentHouseholdItemsDrawing);
+                      // var url = await ref.getDownloadURL();
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Stack(
@@ -298,7 +307,6 @@ class _HouseholdItemsDrawingSelectionScreenState extends State<HouseholdItemsDra
                               child: InkWell(
                                 borderRadius: BorderRadius.circular(25.0),
                                 onTap: (){
-                                  // Navigator.pushNamed(context, '/pan_drawing_view_screen');
                                   Navigator.pushNamed(
                                     context,
                                     HouseholdItemsDrawingViewScreen.routeName,
