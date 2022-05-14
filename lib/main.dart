@@ -9,13 +9,15 @@ import 'Screens/PanScreens/pan_drawing_view_screen.dart';
 import 'Screens/auth_screen.dart';
 import 'Screens/consent_to_use.dart';
 import 'Screens/FlatItemsScreens/flat_items_selection_screen.dart';
+import 'Screens/firebase_screen.dart';
 import 'Screens/group_selection_screen.dart';
 import 'Screens/HouseholdItemsScreens/household_items_selection_screen.dart';
 import 'Screens/KettleScreens/kettle_selection_screen.dart';
 import 'Screens/PanScreens/pan_selection_screen.dart';
 
 void main() {
-  runApp(const SibTProductDesignApp());
+  runApp(const FirebaseScreen());
+  // runApp(const SibTProductDesignApp());
   // runApp(const AuthScreen());
   // runApp(const ConsentToUse());
   // runApp(const PanSelection());
